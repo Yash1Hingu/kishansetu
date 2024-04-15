@@ -72,6 +72,11 @@ nav #navbuttons button {
     background-color: transparent;
     border: none;
     margin-left: 16px;
+    cursor: pointer;
+}
+
+nav #navbuttons button:hover{
+    opacity: 80%;
 }
 
 header .subnavbar{
@@ -87,6 +92,10 @@ header .subnavbar{
     text-decoration: none;
     padding: 8px 4px;
     font-size: 0.8rem;
+}
+
+.subnavbar a:hover{
+    opacity: 80%;
 }
 
 main {
@@ -200,4 +209,9 @@ main #filter .starreviews {
     background-color: var(--feldgrau);
     color: var(--whitenectar);
     margin-top: 8px;
+    cursor: pointer;
+}
+
+.productcard button:hover{
+    opacity: 70%;
 }
