@@ -160,6 +160,7 @@ main #filter .starreviews {
     flex-wrap: wrap;
     gap: 32px;
     padding: 24px 32px;
+    justify-content: center;
 }
 
 .productcard{
