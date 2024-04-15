@@ -1,0 +1,202 @@
+@font-face {
+    font-family: 'Laila-Regular';
+    src: url(fontfamily/Laila/Laila-Regular.ttf);
+}
+
+:root {
+    /* Used For Nav. background-color */
+    --racinggreen: #12372D;
+    /* Used as a background color in body content */
+    --cardingreen: #12372A;
+    /* Used as button, card background-color */
+    --feldgrau: #436850;
+    /* Used As a Text-color */
+    --whitenectar: #FBFADA;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Laila-Regular';
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--cardingreen);
+    padding: 8px 48px;
+}
+
+nav #brandlogo {
+    width: 48px;
+}
+
+nav #searchbar {
+    display: flex;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+nav #searchbar select {
+    width: fit-content;
+    border: none;
+    font-size: 12px;
+    color: var(--whitenectar);
+    background-color: var(--feldgrau);
+    padding: 8px;
+    outline: none;
+}
+
+nav #searchbar input {
+    border: none;
+    outline: none;
+    padding: 8px;
+    width: 40vw;
+    background-color: var(--whitenectar);
+    color: var(--racinggreen);
+}
+
+nav #searchbar button {
+    background-color: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    padding: 4px;
+    background-color: var(--feldgrau);
+    cursor: pointer;
+}
+
+nav #navbuttons button {
+    background-color: transparent;
+    border: none;
+    margin-left: 16px;
+}
+
+header .subnavbar{
+    background-color: var(--feldgrau);
+    display: flex;
+    align-items: center;
+    padding: 0 52px;
+    gap: 24px;
+}
+
+.subnavbar a{
+    color: var(--whitenectar);
+    text-decoration: none;
+    padding: 8px 4px;
+    font-size: 0.8rem;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+}
+
+main #filter {
+    background-color: var(--whitenectar);
+    padding: 12px 24px;
+    color: var(--racinggreen);
+}
+
+main #filter .starreviews {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.starreviews h4 {
+    color: var(--cardingreen);
+}
+
+.starreviews button {
+    width: fit-content;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.starreviews button img {
+    width: 8rem;
+}
+
+.pricefilter {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.pricefilter button {
+    width: fit-content;
+    background-color: transparent;
+    border: none;
+}
+
+.pricefilter form {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.pricefilter form input {
+    width: 70px;
+    background-color: var(--feldgrau);
+    border-radius: 4px;
+    border: none;
+    color: var(--whitenectar);
+    padding: 4px;
+}
+
+.pricefilter form button {
+    background-color: var(--feldgrau);
+    padding: 4px;
+    border-radius: 4px;
+    color: var(--whitenectar);
+}
+
+#productsgrid{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    padding: 24px 32px;
+}
+
+.productcard{
+    background-color: var(--whitenectar);
+    max-width: 250px;
+    padding: 12px;
+    border-radius: 24px;
+    color: var(--racinggreen);
+}
+
+.productcard h4{
+    opacity: 60%;
+}
+
+.productcard img{
+    margin-top: 8px;
+    width: 70%;
+}
+
+.productcard .productimg img{
+    width: 100%;
+    aspect-ratio: 1.5/1;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.productcard span{
+    display: flex;
+    align-items: baseline;
+}
+
+.productcard button{
+    width: 100%;
+    padding: 4px;
+    border: none;
+    border-radius: 12px;
+    background-color: var(--feldgrau);
+    color: var(--whitenectar);
+    margin-top: 8px;
+}
