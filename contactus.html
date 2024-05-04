@@ -14,13 +14,18 @@
             font-family: "Laila", serif;
             margin: 0;
             padding: 0;
-            background-color: #12372A;
-            background: linear-gradient(135deg, #12372A 60%, #436850);
+            background-color: #12372A; 
             color: #fff;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .dark-theme {
+            background-color: #1f1f1f;
+            color: #fff;
         }
 
         .contact-form {
@@ -64,7 +69,9 @@
             height: 100px;
         }
 
-        .form-group input[type="submit"] {
+        .form-group input[type="submit"],
+        .form-group input[type="button"],
+        .theme-toggle-btn {
             background-color: #12372A;
             color: #fff;
             border: none;
@@ -74,7 +81,9 @@
             transition: background-color 0.3s;
         }
 
-        .form-group input[type="submit"]:hover {
+        .form-group input[type="submit"]:hover,
+        .form-group input[type="button"]:hover,
+        .theme-toggle-btn:hover {
             background-color: #436850;
         }
     </style>
@@ -84,28 +93,49 @@
 
     <div class="contact-form">
         <h2>Contact Us</h2>
-        <form action="#" method="POST">
+        <form id="contactForm" action="#" method="POST">
             <div class="form-group">
                 <label for="first_name">First Name</label>
-                <input type="text" id="first_name" name="first_name" required>
+                <input autocomplete="off" type="text" id="first_name" name="first_name" required>
             </div>
             <div class="form-group">
                 <label for="last_name">Last Name</label>
-                <input type="text" id="last_name" name="last_name" required>
+                <input autocomplete="off" type="text" id="last_name" name="last_name" required>
             </div>
             <div class="form-group">
                 <label for="email">Email</label>
-                <input type="email" id="email" name="email" required>
+                <input autocomplete="off" type="email" id="email" name="email" required>
             </div>
             <div class="form-group">
                 <label for="question">Your Question</label>
-                <textarea id="question" name="question" required></textarea>
+                <textarea autocomplete="off" id="question" name="question" required></textarea>
             </div>
             <div class="form-group">
                 <input type="submit" value="Send">
+                <input type="button" id="resetBtn" value="Reset">
             </div>
         </form>
     </div>
+
+    <button class="theme-toggle-btn" onclick="toggleTheme()">Change Theme</button>
+
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const resetBtn = document.getElementById("resetBtn");
+            const form = document.getElementById("contactForm");
+
+            resetBtn.addEventListener("click", function () {
+                form.reset();
+            });
+        });
+
+
+        function toggleTheme() {
+            const body = document.body;
+            body.classList.toggle('dark-theme');
+        }
+    </script>
 
 </body>
 
