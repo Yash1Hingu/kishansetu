@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kisan Setu 🌱- FAQ</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Laila:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Color theme */
+        :root {
+            --color-primary: #12372A;
+            --color-secondary: #12372D;
+            --color-accent: #436850;
+            --color-text: #FBFADA;
+        }
+
+        /* Global styles */
+        body {
+            font-family: "Laila", serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, var(--color-primary) 60%, var(--color-accent));
+            color: var(--color-text);
+        }
+
+        /* Header */
+        header {
+            background-color: var(--color-primary);
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Navbar */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: var(--color-secondary);
+            padding: 8px 48px;
+        }
+
+        nav #brandlogo {
+            width: 48px;
+        }
+
+        nav #searchbar {
+            display: flex;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        nav #searchbar select {
+            width: fit-content;
+            border: none;
+            font-size: 12px;
+            color: var(--color-text);
+            background-color: var(--color-accent);
+            padding: 8px;
+            outline: none;
+        }
+
+        nav #searchbar input {
+            border: none;
+            outline: none;
+            padding: 8px;
+            width: 40vw;
+            background-color: var(--color-text);
+            color: var(--color-primary);
+        }
+
+        nav #searchbar button {
+            background-color: transparent;
+            border: none;
+            display: flex;
+            align-items: center;
+            padding: 4px;
+            background-color: var(--color-accent);
+            cursor: pointer;
+        }
+
+        nav #navbuttons button {
+            background-color: transparent;
+            border: none;
+            margin-left: 16px;
+            cursor: pointer;
+        }
+
+        nav #navbuttons button:hover {
+            opacity: 0.8;
+        }
+
+        /* FAQ section */
+        .faq-container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        .faq-item {
+            background-color: var(--color-secondary);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .faq-item h3 {
+            color: var(--color-accent);
+            margin-top: 0;
+        }
+
+        .faq-item p {
+            line-height: 1.5;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--color-primary);
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+  
+
+    <!-- Navbar -->
+    <nav>
+        <img src="images/KisanSetuLogo.svg" alt="logo" id="brandlogo">
+        <div>
+            <form action="" id="searchbar">
+                <select name="" id="">
+                    <option value="All">All</option>
+                    <option value="veg">Vegatables</option>
+                    <option value="fruits">Fruits</option>
+                    <option value="dryfruits">Dry Fruits</option>
+                </select>
+                <input type="text" name="" id="">
+                <button>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1.8em" height="1.8em" viewBox="0 0 512 512">
+                        <path fill="#FBFADA"
+                            d="M456.69 421.39L362.6 327.3a173.81 173.81 0 0 0 34.84-104.58C397.44 126.38 319.06 48 222.72 48S48 126.38 48 222.72s78.38 174.72 174.72 174.72A173.81 173.81 0 0 0 327.3 362.6l94.09 94.09a25 25 0 0 0 35.3-35.3M97.92 222.72a124.8 124.8 0 1 1 124.8 124.8a124.95 124.95 0 0 1-124.8-124.8" />
+                    </svg>
+                </button>
+            </form>
+        </div>
+        <div id="navbuttons">
+            <button>
+                <svg xmlns="http://www.w3.org/2000/svg" width="1.8em" height="1.8em" viewBox="0 0 24 24">
+                    <path fill="#FBFADA" d="M17 18c-1.11 0-2 .89-2 2a2 2 0 0 0 2 2a2 2 0 0 0 2-2a2 2 0 0 0-2-2M1 2v2h2l3.6 7.59l-1.36 2.45c-.15.28-.24.61-.24.96a2 2 0 0 0 2 2h12v-2H7.42a.25.25 0 0 1-.25-.25q0-.075.03-.12L8.1 13h7.45c.75 0 1.41-.42 1.75-1.03l3.58-6.47c.07-.16.12-.33.12-.5a1 1 0 0 0-1-1H5.21l-.94-2M7 18c-1.11 0-2 .89-2 2a2 2 0 0 0 2 2a2 2 0 0 0 2-2a2 2 0 0 0-2-2" />
+                </svg> 
+            </button>
+            <button>
+                <svg xmlns="http://www.w3.org/2000/svg" width="1.8em" height="1.8em" viewBox="0 0 24 24">
+                    <path fill="#FBFADA"
+                        d="M12 4a4 4 0 0 1 4 4a4 4 0 0 1-4 4a4 4 0 0 1-4-4a4 4 0 0 1 4-4m0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4" />
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <div class="faq-container">
+        <h2>Frequently Asked Questions</h2>
+
+        <div class="faq-item">
+            <h3>What products do you offer?</h3>
+            <p>We offer a wide range of fresh, high-quality produce grown by local farmers. Our selection includes fruits, vegetables, herbs, and more.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>How do I place an order?</h3>
+            <p>You can easily place an order through our online platform. Simply browse our product selection, add the items you want to your cart, and proceed to checkout.</p>
+          </div>
+      
+          <div class="faq-item">
+            <h3>What are your delivery options?</h3>
+            <p>We offer free delivery for all orders over $50. For orders under $50, a small delivery fee may apply. We deliver to select locations within a specific radius.</p>
+          </div>
+      
+          <div class="faq-item">
+            <h3>Can I return or exchange products?</h3>
+            <p>Yes, we have a 14-day return policy. If you're not satisfied with your purchase, you can contact our customer support team to initiate a return or exchange.</p>
+          </div>
+      
+          <div class="faq-item">
+            <h3>How do I contact customer support?</h3>
+            <p>You can reach our customer support team by email at support@kisansetu.com or by phone at 555-1234-5678. We're available Monday to Friday, 9 AM to 5 PM.</p>
+          </div>
+          
+    </div>
+
+</body>
+
+</html>
