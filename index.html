@@ -14,13 +14,17 @@
             <img src="images/KisanSetuLogo.svg" alt="logo" id="brandlogo">
             <div>
                 <form action="" id="searchbar">
-                    <select name="" id="">
+                    <select id="category" name="category">
                         <option value="All">All</option>
-                        <option value="veg">Vegatables</option>
+                        <option value="veg">Vegetables</option>
                         <option value="fruits">Fruits</option>
                         <option value="dryfruits">Dry Fruits</option>
                     </select>
-                    <input type="text" name="" id="">
+
+                    <div class="searchsuggestions">
+                        <input type="text" id="searchBar" onkeyup="showSuggestions(this.value)" placeholder="Search..">
+                        <div id="suggestions"></div>
+                    </div>
                     <button>
                         <svg xmlns="http://www.w3.org/2000/svg" width="1.8em" height="1.8em" viewBox="0 0 512 512">
                             <path fill="#FBFADA"
@@ -171,6 +175,8 @@
             </div>
         </section>
     </main>
+
+    <script src="script.js"></script>
 </body>
 
 </html>

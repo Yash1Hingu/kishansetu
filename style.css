@@ -68,6 +68,22 @@ nav #searchbar button {
     cursor: pointer;
 }
 
+nav #suggestions{
+    position: absolute;
+    background-color: var(--whitenectar);
+    color: var(--racinggreen);
+    width: 40vw;
+}
+
+nav #suggestions > div{
+    padding: 4px 12px;
+    cursor: pointer;
+}
+
+nav #suggestions > div:hover{
+    background-color: #12372a83;
+}
+
 nav #navbuttons button {
     background-color: transparent;
     border: none;
@@ -75,11 +91,11 @@ nav #navbuttons button {
     cursor: pointer;
 }
 
-nav #navbuttons button:hover{
+nav #navbuttons button:hover {
     opacity: 80%;
 }
 
-header .subnavbar{
+header .subnavbar {
     background-color: var(--feldgrau);
     display: flex;
     align-items: center;
@@ -87,14 +103,14 @@ header .subnavbar{
     gap: 24px;
 }
 
-.subnavbar a{
+.subnavbar a {
     color: var(--whitenectar);
     text-decoration: none;
     padding: 8px 4px;
     font-size: 0.8rem;
 }
 
-.subnavbar a:hover{
+.subnavbar a:hover {
     opacity: 80%;
 }
 
@@ -164,7 +180,7 @@ main #filter .starreviews {
     color: var(--whitenectar);
 }
 
-#productsgrid{
+#productsgrid {
     display: flex;
     flex-wrap: wrap;
     gap: 32px;
@@ -172,7 +188,7 @@ main #filter .starreviews {
     justify-content: center;
 }
 
-.productcard{
+.productcard {
     background-color: var(--whitenectar);
     max-width: 250px;
     padding: 12px;
@@ -180,28 +196,28 @@ main #filter .starreviews {
     color: var(--racinggreen);
 }
 
-.productcard h4{
+.productcard h4 {
     opacity: 60%;
 }
 
-.productcard img{
+.productcard img {
     margin-top: 8px;
     width: 70%;
 }
 
-.productcard .productimg img{
+.productcard .productimg img {
     width: 100%;
     aspect-ratio: 1.5/1;
     object-fit: cover;
     border-radius: 12px;
 }
 
-.productcard span{
+.productcard span {
     display: flex;
     align-items: baseline;
 }
 
-.productcard button{
+.productcard button {
     width: 100%;
     padding: 4px;
     border: none;
@@ -212,6 +228,6 @@ main #filter .starreviews {
     cursor: pointer;
 }
 
-.productcard button:hover{
+.productcard button:hover {
     opacity: 70%;
 }
