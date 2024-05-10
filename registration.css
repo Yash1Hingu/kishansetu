@@ -2,80 +2,94 @@
     margin: 0;
     padding: 0;
     font-family: "Laila", serif;
-  font-weight: 300;
-  font-style: normal;
-}
-
-.laila-medium {
-    font-family: "Laila", serif;
-    font-weight: 500;
+    font-weight: 300;
     font-style: normal;
   }
-
+  body{
+      background-image: url(./images/tractor.jpg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+  }
+  .laila-medium {
+      font-family: "Laila", serif;
+      font-weight: 500;
+      font-style: normal;
+  }
   
-
-.inner{
-    font-family: "Laila", serif;
-  font-weight: 300;
-  font-style: normal;
-
-}
-.container{
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #FBFADA;
-}
-.box{
-    border: 2px solid #436850;
-    background: linear-gradient(135deg, #12372A 60%, #436850);
-    height: 450px;
-    width: 650px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.heading{
-    margin-left: 18px;
-    display: flex;
-    justify-content: center;
-    text-align: center; 
-    gap: 10px;
-    font-weight: 500;
-    color: #FBFADA;
-}
-
-
-.inner{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 8px;
-    height: 400px;
-    border: 2px solid linear-gradient(135deg, #12372A 60%, #436850);
-    width: 600px;
-    border-radius: 8px;
-}
-.inputs{
-    width: 190px;
-    height: 28px;
-    padding-left: 3px;
-    border-radius: 10px;
-}
-.small-inputs{
-    width: 90px;
-}
-.file-in{
-    border-radius: 0px;
-}
-.submit{
-    display: flex;
-    justify-content: center;
-}
-.sub-in{
-    height: 40px;
-    border-radius: 10px;
-    margin-bottom: 35px;
-}
+  .inner{
+      font-family: "Laila", serif;
+    font-weight: 300;
+    font-style: normal;
+  
+  }
+  .container{
+      height: 100vh;
+      width: 100vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #FBFADA;
+  }
+  .box{
+      border: 2px solid #436850;
+      background: linear-gradient(135deg, #12372aa7 60%, #436850);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      /* fill-opacity: initial; */
+  }
+  
+  .box form{
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      padding: 32px;
+  }
+  .heading{
+      margin-left: 18px;
+      display: flex;
+      justify-content: center;
+      text-align: center; 
+      gap: 10px;
+      font-weight: 500;
+      color: #FBFADA;
+  }
+  
+  .box form .flexinputs{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 24px;
+  }
+  .inputs{
+      width: 190px;
+      padding-left: 3px;
+      border-radius: 16px;
+      border: none;
+      padding: 8px 12px;
+      outline: none;
+  }
+  .small-inputs{
+      width: 90px;
+  }
+  .file-in{
+      border-radius: 0px;
+  }
+  .submit{
+      display: flex;
+      justify-content: center;
+  }
+  .sub-in{
+      height: 40px;
+      border-radius: 10px;
+      margin-bottom: 35px;
+  }
+  
+  #submitbtn{
+      width: fit-content;
+      margin: 0 auto;
+      padding: 8px 24px;
+      border-radius: 32px;
+      border: none;
+  }
