@@ -1,0 +1,348 @@
+@font-face {
+    font-family: 'Laila-Regular';
+    src: url(fontfamily/Laila/Laila-Regular.ttf);
+}
+
+:root {
+    /* Used For Nav. background-color */
+    --racinggreen: #12372D;
+    /* Used as a background color in body content */
+    --cardingreen: #12372A;
+    /* Used as button, card background-color */
+    --feldgrau: #436850;
+    /* Used As a Text-color */
+    --whitenectar: #FBFADA;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Laila-Regular';
+}
+.text-center {
+    text-align: center !important;
+}
+.mt-5 {
+    margin-top: 3rem !important;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--cardingreen);
+    padding: 8px 48px;
+}
+
+nav #brandlogo {
+    width: 48px;
+}
+
+nav #searchbar {
+    display: flex;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+nav #searchbar select {
+    width: fit-content;
+    border: none;
+    font-size: 12px;
+    color: var(--whitenectar);
+    background-color: var(--feldgrau);
+    padding: 8px;
+    outline: none;
+}
+
+nav #searchbar input {
+    border: none;
+    outline: none;
+    padding: 8px;
+    width: 40vw;
+    background-color: var(--whitenectar);
+    color: var(--racinggreen);
+}
+
+nav #searchbar button {
+    background-color: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    padding: 4px;
+    background-color: var(--feldgrau);
+    cursor: pointer;
+}
+
+nav #navbuttons button {
+    background-color: transparent;
+    border: none;
+    margin-left: 16px;
+    cursor: pointer;
+}
+
+nav #navbuttons button:hover{
+    opacity: 80%;
+}
+
+header .subnavbar{
+    background-color: var(--feldgrau);
+    display: flex;
+    align-items: center;
+    padding: 0 52px;
+    gap: 24px;
+}
+
+.subnavbar a{
+    color: var(--whitenectar);
+    text-decoration: none;
+    padding: 8px 4px;
+    font-size: 0.8rem;
+}
+
+.subnavbar a:hover{
+    opacity: 80%;
+}
+.header .carousel-item img{
+    width: 100%;
+    height: 80vh;
+    border-radius: 2px;
+}
+.img_text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right: 25vw;
+    align-items: center;
+    color: var(--whitenectar);
+    
+}
+.img_text h1{
+    font-weight: bold; /* Make the text bold */
+    font-size: 4rem;
+    color: var(--whitenectar);
+    z-index: 5px;
+    backdrop-filter: blur(5px);
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: var(--cardingreen);
+}
+.img_text p{
+    backdrop-filter: blur(5px);
+    text-align: left
+}
+.img_text span{
+    font-weight: bold; 
+    color: var(--whitenectar);
+    /* color: var(--racinggreen); */
+    /* -webkit-text-stroke-width: 0.1px;
+    -webkit-text-stroke-color: var(--whitenectar); */
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: var(--cardingreen);
+}
+main {
+    display: grid;
+}
+h1{
+    font-size: 3rem;
+    margin-top: 0;
+    margin-bottom: .5rem;
+    font-weight: 500;
+    line-height: 1.2;
+    color: var(--bs-heading-color);
+}
+.bg-green{
+    background-color: var(--cardingreen);
+    color: var(--whitenectar);
+}
+main #filter {
+    background-color: var(--whitenectar);
+    padding: 12px 24px;
+    color: var(--racinggreen);
+}
+
+main #filter .starreviews {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.starreviews h4 {
+    color: var(--cardingreen);
+}
+
+.starreviews button {
+    width: fit-content;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.starreviews button img {
+    width: 8rem;
+}
+
+.pricefilter {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.pricefilter button {
+    width: fit-content;
+    background-color: transparent;
+    border: none;
+}
+
+.pricefilter form {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.pricefilter form input {
+    width: 70px;
+    background-color: var(--feldgrau);
+    border-radius: 4px;
+    border: none;
+    color: var(--whitenectar);
+    padding: 4px;
+}
+
+.pricefilter form button {
+    background-color: var(--feldgrau);
+    padding: 4px;
+    border-radius: 4px;
+    color: var(--whitenectar);
+}
+
+#productsgrid{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    padding: 24px 32px;
+    justify-content: center;
+}
+
+.productcard:hover{
+    transform: scale(1.1);
+}
+.productcard{
+    background-color: var(--whitenectar);
+    max-width: 250px;
+    padding: 12px;
+    border-radius: 24px;
+    color: var(--racinggreen);
+}
+
+.productcard h4{
+    opacity: 60%;
+}
+
+.productcard img{
+    margin-top: 8px;
+    width: 70%;
+}
+
+.productcard .productimg img{
+    width: 100%;
+    aspect-ratio: 1.5/1;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.productcard span{
+    display: flex;
+    align-items: baseline;
+}
+
+.productcard button{
+    align-self: flex-end;
+    width: 100%;
+    padding: 4px;
+    border: none;
+    border-radius: 12px;
+    background-color: var(--feldgrau);
+    color: var(--whitenectar);
+    margin-top: 8px;
+    cursor: pointer;
+}
+
+.productcard button:hover{
+    opacity: 70%;
+}
+
+
+footer{
+    background: linear-gradient(135deg, var(--cardingreen) 40%, var(--feldgrau));
+}
+/* FAQ section */
+.faq-container h1{
+    color: var(--whitenectar);
+    text-align: center;
+    padding-bottom: 2px;
+}
+.faq-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+  }
+
+  .faq-item {
+    box-shadow:2px 5px 15px var(--whitenectar);
+    background-color: var(--whitenectar);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+
+  .faq-item h3 {
+    color: var(--feldgrau);
+    margin: 0;
+  }
+
+  .faq-item p {
+    line-height: 1.5;
+  }
+  .faq-ans{
+    display: none;
+    overflow: hidden;
+  }
+  
+  .faq-ans.active {
+    display: block;
+  }
+  
+  .faq-que {
+    background-color: var(--theme-button-color);
+    /* box-shadow:2px 5px 15px var(--whitenectar); */
+    color: var(--feldgrau);
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: background-color 0.4s ease;
+    display: flex;
+    align-items: start;
+    font-weight: bold;
+  }
+  .faq-item:hover {
+    transform: scale(1.1);
+  }
+  
+  .faq-que::after {
+    font-size: 13px;
+    color: #777;
+    margin-left: auto;
+    content: '\02795';
+  }
+  
+  .faq-que.active::after {
+    content: '\2796';
+  }
+  
+  
