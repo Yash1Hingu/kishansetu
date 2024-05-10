@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <link rel="stylesheet" href="/css/productpage.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Laila:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="main">
+        <div id="heading">
+            <h1>Product Page ☘</h1>
+        </div>
+
+        <div id="left">
+            <div class="profileName">
+
+                <div id="pfp">
+                    <img src="https://static-ai.asianetnews.com/images/01ev0tek88gvna9vmjxqtdqd92/dhoni-farmhouse-photos-8-jpg_710x400xt.jpg"
+                        alt="">
+                    <div id="name">
+                        Mahendra Singh Dhoni
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="leftImageSlider">
+
+            </div>
+
+            <div class="leftImageSlider">
+                <img id="image1" src="https://images.news18.com/static-guju/uploads/2022/04/setur-g.jpg" alt="">
+                <img id="image2"
+                    src="https://www.tnnursery.net/cdn/shop/files/mulberry-tree-tn-nursery-1.jpg?v=1710165966" alt="">
+                <img id="image3"
+                    src="https://floridafruitgeek.files.wordpress.com/2019/04/img_20190406_142903259_1_1.jpg?w=500&h=500&crop=1"
+                    alt="">
+            </div>
+            <div class="productImage">
+
+            </div>
+            <div class="favBtn">
+                Add to favorite ☘
+            </div>
+
+
+        </div>
+
+        <div id="right">
+            <div id="productName">
+                <h1>Mulberry || Sweet Mulberry From Jamnagar || Famous Mulbarry</h1>
+            </div>
+            <div class="description">
+                <p>Luscious Mulberries: Sweet, Juicy, Nutritious. Enhance Your Health & Delight Your Taste Buds!
+                    Luscious Mulberries: Sweet, Juicy, Nutritious. Enhance Your Health & Delight Your Taste Buds!
+                    Luscious Mulberries: Sweet, Juicy, Nutritious. Enhance Your Health & Delight Your Taste Buds!
+                    Luscious Mulberries: Sweet, Juicy, Nutritious. Enhance Your Health & Delight Your Taste Buds!
+                </p>
+            </div>
+
+            <div id="rightSection3">
+                <div class="price">
+                    <h2>50rs/kg</h2>
+                </div>
+
+                <div class="addCartBtn">
+                    <h2>Add Cart</h2>
+                </div>
+            </div>
+
+            <div class="ratings">
+                <h1>Farmer's Ratings</h1>
+
+                <img id="ratingImage"
+                    src="https://png.pngtree.com/png-vector/20220708/ourmid/pngtree-five-star-rating-icon-3-flat-button-vector-vector-png-image_32571680.png"
+                    alt="">
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+
+<script>
+    const productImage = document.querySelector('.productImage');
+    const thumbnailImages = document.querySelectorAll('.leftImageSlider img');
+
+
+    thumbnailImages.forEach(function (img) {
+        img.addEventListener('click', function () {
+            // Update the product image source with the clicked thumbnail image source
+            // productImage.style.backgroundImage = 'url(' + this.src + ')';
+            productImage.style.backgroundImage = `url(${this.src})`;
+        });
+    });
+
+    //Zoom
+
+    productImage.addEventListener('mouseover', function () {
+        this.style.backgroundSize = '150%';
+    });
+
+    productImage.addEventListener('mouseout', function () {
+        this.style.backgroundSize = 'cover';
+    });
+
+
+    // Function to handle right-click event
+
+
+    productImage.addEventListener('contextmenu', function (event) {
+        // Prevent the default context menu from appearing
+        event.preventDefault();
+
+        // Create a context menu
+        const contextMenu = document.createElement('div');
+        contextMenu.classList.add('context-menu');
+        contextMenu.innerHTML = `
+            <div class="context-menu-item">Save Image</div>
+            <div class="context-menu-item">View Image Details</div>
+        `;
+        contextMenu.style.position = 'absolute';
+        contextMenu.style.top = `${event.clientY}px`;
+        contextMenu.style.left = `${event.clientX}px`;
+        contextMenu.style.border = '1px solid black';
+        contextMenu.style.cursor = 'pointer';
+        contextMenu.style.padding = '5px';
+        contextMenu.style.borderRadius = '5px';
+
+        // Append the context menu to the body
+        document.body.appendChild(contextMenu);
+
+        // Function to handle context menu item click
+        const contextMenuItems = contextMenu.querySelectorAll('.context-menu-item');
+        contextMenuItems.forEach(item => {
+            item.addEventListener('click', function () {
+                // Handle the selected context menu item
+                switch (item.textContent) {
+                    case 'Save Image':
+                        // Save image functionality
+                        const imageSrc = productImage.style.backgroundImage.replace('url("', '').replace('")', '');
+                        const imageElement = document.createElement('a');
+                        imageElement.href = imageSrc;
+                        imageElement.download = 'product_image';
+                        document.body.appendChild(imageElement);
+                        imageElement.click();
+                        document.body.removeChild(imageElement);
+                        break;
+                    case 'View Image Details':
+                        // View image details functionality
+                        alert('View image details!');
+                        break;
+                    default:
+                        break;
+                }
+                // Remove the context menu after selection
+                document.body.removeChild(contextMenu);
+            });
+        });
+
+        // Function to handle clicking outside the context menu
+        const handleOutsideClick = function (event) {
+            if (!contextMenu.contains(event.target)) {
+                document.body.removeChild(contextMenu);
+                document.removeEventListener('click', handleOutsideClick);
+            }
+        };
+
+        // Add event listener to handle clicking outside the context menu
+        document.addEventListener('click', handleOutsideClick);
+    });
+
+</script>
+
+</html>
