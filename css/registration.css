@@ -6,7 +6,7 @@
     font-style: normal;
   }
   body{
-      background-image: url(./images/tractor.jpg);
+      background-image: url(../images/tractor.jpg);
       background-repeat: no-repeat;
       background-position: center;
       background-size: cover;
@@ -71,7 +71,7 @@
       outline: none;
   }
   .small-inputs{
-      width: 90px;
+      width: 80px;
   }
   .file-in{
       border-radius: 0px;
@@ -92,4 +92,8 @@
       padding: 8px 24px;
       border-radius: 32px;
       border: none;
+  }
+
+  #state option{
+    color: #436850;
   }
