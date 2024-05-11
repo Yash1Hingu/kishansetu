@@ -31,7 +31,7 @@ const indianStates = [
   
 //   console.log(indianStates);
 const districts = {
-    'Gujarat':[
+    'ggujarat':[
         "Ahmedabad",
         "Amreli",
         "Anand",
@@ -66,7 +66,7 @@ const districts = {
         "Vadodara",
         "Valsad"
       ],
-    'AndhraPradesh':[
+    'andhra pradesh':[
         "Anantapur",
         "Chittoor",
         "East Godavari",
@@ -93,7 +93,7 @@ const districts = {
         "Vizianagaram",
         "West Godavari"
     ],
-    'arunachalPradesh':[
+    'arunachal pradesh':[
         "Anjaw",
         "Bichom",
         "Siang",
@@ -256,7 +256,7 @@ const districts = {
         "Sonipat",
         "Yamunanagar"
     ],
-    'himachalPradesh':[
+    'himachal pradesh':[
         "Bilaspur",
         "Chamba",
         "Hamirpur",
@@ -344,7 +344,7 @@ const districts = {
         "Kannur",
         "Kasaragod"
     ],
-    'madhyaPradesh':[
+    'madhya pradesh':[
         "Bhopal",
         "Raisen",
         "Rajgarh",
@@ -664,7 +664,7 @@ const districts = {
         "Sipahijila",
         "Gomati"
     ],
-    'uttarPradesh':[
+    'uttar pradesh':[
         "Agra",
         "Aligarh",
         "Ambedkar Nagar",
@@ -723,7 +723,7 @@ const districts = {
         "Udham Singh Nagar",
         "Uttarkashi"
     ],
-    'westBengal':[
+    'west bengal':[
         "Alipurduar",
         "Bankura",
         "Birbhum",
@@ -758,8 +758,9 @@ indianStates.forEach(s => {
 
 state.addEventListener('change',()=>{
     const district = document.getElementById('district');
-    console.log(districts)
-    districts[state.value].forEach(d => {
+    console.log(districts[state.value.toLowerCase()])
+    district.innerHTML = null;
+    districts[state.value.toLowerCase()].forEach(d => {
         const el = document.createElement("option");
         el.value = d;
         el.innerHTML = d;
