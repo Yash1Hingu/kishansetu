@@ -1,0 +1,112 @@
+body{
+    background-color: #f4f3e4;
+}
+:root {
+    --racinggreen: #12372D;
+    --cardingreen: #12372A;
+    --feldgrau: #436850;
+    --whitenectar: #FBFADA;
+}
+#cart-container {
+    overflow: auto;
+}
+#cart-container table {
+    border-collapse: collapse;
+    width: 100%;
+    table-layout: fixed;
+    white-space: nowrap;
+}
+#cart-container table thead {
+    font-weight: 700;
+}
+#cart-container table thead td {
+    background: #12372A;
+    color: #fff;
+    border: none;
+    padding: 6px 0;
+}
+#cart-container table td {
+    border: 1px solid black;
+    text-align: center;
+}
+#cart-container table td:nth-child(1) {
+    width: 100px;
+}
+#cart-container table td:nth-child(2),
+#cart-container table td:nth-child(3) {
+    width: 100px;
+}
+#cart-container table td:nth-child(4),
+#cart-container table td:nth-child(5),
+#cart-container table td:nth-child(6) {
+    width: 170px;
+}
+#cart-container table tbody img {
+    width: 100px;
+    height: 80px;
+    object-fit: cover;
+}
+#cart-bottom .coupon>div,
+#cart-bottom .total>div {
+    border: 1px solid black;
+}
+#cart-bottom .coupon h5,
+#cart-bottom .total h5 {
+    background: #12372A;
+    color: #fff;
+    border: none;
+    padding: 6px 12px;
+    font-weight: 700;
+}
+#cart-bottom .coupon p,
+#cart-bottom .coupon input {
+    padding: 0 12px;
+}
+#cart-bottom .coupon input {
+    height: 44px;
+}
+#cart-bottom .coupon input,
+#cart-bottom .coupon button {
+    margin: 0 0 20px 12px;
+}
+#cart-bottom div>div {
+    padding: 0 12px;
+}
+#cart-bottom .total h6 {
+    color: #2a2a2a;
+}
+.second-hr {
+    background: #b8b7b3;
+    width: 100%;
+    height: 1px;
+    margin: 10px 0;
+}
+#cart-bottom .total>button {
+    margin: 0 12px 20px 0;
+    display: flex;
+    justify-content: flex-end;
+   
+}
+button{
+    background-color: #12372A;
+    color: #fff;
+}
+#coupon{
+    margin-top:30px;
+}
+#total{
+    margin-top: 30px;
+}
+#table{
+    margin-top: 30px;
+}
+@font-face {
+    font-family: 'Laila-Regular';
+    src: url(fontfamily/Laila/Laila-Regular.ttf);
+}
+
+
+#button{
+    margin-bottom: 20px;
+    margin-left: 350px;
+}
