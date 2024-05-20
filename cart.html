@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="cart.css">
+</head>
+<body>
+    <section id="cart-container" class="container">
+        <table id="table" width="100%">
+            <thead>
+                <tr>
+                    <td>Remove</td>
+                    <td>Image</td>
+                    <td>Product</td>
+                    <td>Price</td>
+                    <td>Quantity</td>
+                    <td>Total</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <a href="#">
+                            <i class="fas fa-trash-alt"></i>
+                        </a>
+                    </td>
+                    <td>
+                        <img src="Potato.jpg" alt="">
+                    </td>
+                    <td><h5>Potato</h5></td>
+                    <td><h5>₹50/500gm</h5></td>
+                    <td>
+                        <input class="w-25 pl-1" value="1" type="number">
+                    </td>
+                    <td><h5>₹50</h5></td>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="#">
+                            <i class="fas fa-trash-alt"></i>
+                        </a>
+                    </td>
+                    <td>
+                        <img src="Tomato.jpg" alt="">
+                    </td>
+                    <td><h5>Tomato</h5></td>
+                    <td><h5>₹30/500gm</h5></td>
+                    <td>
+                        <input class="w-25 pl-1" value="1" type="number">
+                    </td>
+                    <td><h5>₹30</h5></td>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="#">
+                            <i class="fas fa-trash-alt"></i>
+                        </a>
+                    </td>
+                    <td>
+                        <img src="Zucchini.jpg" alt="">
+                    </td>
+                    <td><h5>Zucchini</h5></td>
+                    <td><h5>₹100/500gm</h5></td>
+                    <td>
+                        <input class="w-25 pl-1" value="1" type="number">
+                    </td>
+                    <td><h5>₹100</h5></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section id="cart-bottom" class="container">
+        <div class="row">
+            <div id="coupon" class="coupon col-lg-6 col-md-6 col-12 mb-4">
+                <div>
+                    <h5>Have a coupon?</h5>
+                    <p>Enter your coupon code here</p>
+                    <input type="text" name="" id="" placeholder="Coupon Code">
+                    <button>APPLY COUPON</button>
+                </div>
+            </div>
+            <div id="total" class="total col-lg-6 col-md-6 col-12 ">
+                <div>
+                    <h5>Cart Total</h5>
+                    <div class="d-flex justify-content-between">
+                        <h6>Subtotal</h6>
+                        <p>₹250.00</p>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <h6>Shipping</h6>
+                        <p>₹50.00</p>
+                    </div>
+                    <hr class="second-hr"></hr>
+                    <div class="d-flex justify-content-between">
+                        <h6>Total</h6>
+                        <p>₹300.00</p>
+                    </div>
+                    <button id="button">Proceed To Checkout</button>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
